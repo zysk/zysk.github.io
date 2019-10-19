@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$(".service-thumb").hover(function(){$(this).toggleClass("shadow-lg rounded-lg")});
