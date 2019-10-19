@@ -127,6 +127,12 @@ body {
 }
 
 .service-thumb {
+  transition: all 1s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+
   .illustration {
     max-height: $size-m1;
     margin: 0 auto 1rem;
