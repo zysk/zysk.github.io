@@ -26,14 +26,13 @@ $fluorescent-color: #84f3ec;
 // Mixins
 
 // Headers master mixin
-@mixin headers ($size, $align: left, $upper: true) {
+@mixin headers ($size, $align: left, $case: none, $underline: false) {
   font: 800 $size $font-barlow;
   line-height: $size * 1.15;
   text-align: $align;
+  text-transform: $case;
 
-  @if $upper {
-    text-transform: uppercase;
-  } @else {
+  @if $underline {
     &::after {
       content: '';
       display: block;
@@ -51,7 +50,7 @@ $fluorescent-color: #84f3ec;
 
 // Title headers
 @mixin titles {
-  @include headers($font-m2);
+  @include headers($font-m2, left, uppercase);
   color: $red-color;
 }
 
@@ -92,7 +91,7 @@ body {
 }
 
 .header {
-  @include headers($font-l1, left , false);
+  @include headers($font-l1, left, none, true);
 }
 
 .form-group {
@@ -103,7 +102,7 @@ body {
 
 .highlight {
   font-size: $font-m2;
-  line-height: $font-m2 * 1.15;
+  line-height: $font-m2 * 1.3;
 
   &.red {
     color: $red-color;
@@ -118,7 +117,7 @@ body {
 
 .banner {
   .header {
-    @include headers($font-l3, left, false);
+    @include headers($font-l3, left, none, true);
   }
 
   .illustration {
@@ -135,14 +134,20 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.125);
   }
 
+  .title {
+    @include headers($font-m1, left, uppercase, true);
+  }
+
   .illustration {
     max-height: $size-m1;
-    margin: 0 auto 1rem;
+    padding: 1rem 0;
+    margin: 1rem auto;
     display: block;
   }
 
-  .title {
-    @include headers($font-m1, center);
+  .link {
+    color: $red-color;
+    font-weight: 800;
   }
 }
 
@@ -161,7 +166,7 @@ body {
   }
 }
 
-.about-us {
+.why-us {
   .number {
     @include headers($font-l3);
     color: $red-color;
@@ -172,7 +177,7 @@ body {
   }
 
   .description {
-    max-width: $size-l1;
+    max-width: $size-m3;
   }
 
   .illustration {
