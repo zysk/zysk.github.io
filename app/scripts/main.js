@@ -1,5 +1,3 @@
-console.log('\'Allo \'Allo!');
-
 // Uncomment to enable Bootstrap tooltips
 // https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
 // $(function () { $('[data-toggle="tooltip"]').tooltip(); });
@@ -14,8 +12,8 @@ $('.service-thumb').hover(function () {
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-  'Great Service',
-  'Great Results'
+  'We get our geek hats on',
+  'and code your ideas to life.',
   );
   var iSpeed = 100; // time delay of print out
   var iIndex = 0; // start printing array at this posision

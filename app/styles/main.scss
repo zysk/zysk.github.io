@@ -117,7 +117,7 @@ body {
 
 .banner {
   .header {
-    @include headers($font-l3, left, none, true);
+    @include headers($font-l1, left, none, true);
   }
 
   .illustration {
