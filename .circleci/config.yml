@@ -6,7 +6,7 @@ jobs:
       ignore:
         - gh-pages
     docker:
-       - image: circleci/node:8.16-stretch-browsers
+       - image: circleci/node:9.9.0
     working_directory: ~/repo
     environment:
       - SOURCE_BRANCH: dev
@@ -20,6 +20,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: |
+            npm rebuild node-sass
             npm install
       - save_cache:
           paths:
