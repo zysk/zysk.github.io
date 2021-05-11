@@ -13,8 +13,8 @@ $('.service-thumb').hover(function () {
 // set up text to print, each item in array is new line
 var aText = new Array(
   'We get our geek hats on',
-  'and code your ideas to life.',
-  );
+  'and code your ideas to life.'
+  )
   var iSpeed = 100; // time delay of print out
   var iIndex = 0; // start printing array at this posision
   var iArrLength = aText[0].length; // the length of the text array
