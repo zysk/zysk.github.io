@@ -6,7 +6,7 @@ jobs:
       ignore:
         - gh-pages
     docker:
-       - image: circleci/node:8.16-stretch-browsers
+       - image: circleci/node:latest
     working_directory: ~/repo
     environment:
       - SOURCE_BRANCH: dev
