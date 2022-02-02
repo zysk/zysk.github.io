@@ -166,6 +166,12 @@ body {
   }
 }
 
+.testimonial {
+  .client {
+    max-width: $size-s4;
+  }
+}
+
 .why-us {
   .number {
     @include headers($font-l3);
